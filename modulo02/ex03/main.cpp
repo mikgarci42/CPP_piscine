@@ -31,11 +31,16 @@ bool	bsp( Point const a, Point const b, Point const c, Point const point)
 int	main(void)
 {
 	Point const	a (0, 0);
-	Point const b (4, 0);
+	Point b (0, 0);
 	Point const c (2, 3);
 	Point const	d (2, 1);
 
 	std::cout << b.getFixedX() << std::endl;
+	b.setFixedX(2);
+	std::cout << b.getFixedX() << std::endl;
+	std::cout << b.getFixedY() << std::endl;
+	b.setFixedY(2);
+	std::cout << b.getFixedY() << std::endl;
 	if (bsp(a, b, c, d))
 		std::cout << "El punto se encuentra dentro del plano" << std::endl;
 

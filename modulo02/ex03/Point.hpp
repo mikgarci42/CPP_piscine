@@ -19,32 +19,10 @@ class	Point
 		Point & operator=(const Point  & rhs);
 		
 		Fixed	getFixedX(void) const;
+		void	setFixedX(Fixed const x);
 		Fixed	getFixedY(void) const;
+		void	setFixedY(Fixed const y);
 
-/*		bool	operator > (const Point rhs) const;
-		bool	operator < (const Point rhs) const;
-		bool	operator >= (const Point rhs) const;
-		bool	operator <= (const Point rhs) const;
-		bool	operator == (const Point rhs) const;
-		bool	operator != (const Point rhs) const;
-		Point	operator + (const Fixed rhs) const;
-		Point	operator - (const Fixed rhs) const;
-		Point	operator * (const Fixed rhs) const;
-		Point	operator / (const Fixed rhs) const;
-		Point	operator ++ (void);
-		Point	operator ++ (int);
-		Point	operator -- (void);
-		Point	operator -- (int);
-
-	   	int 	getRawBits(void) const;
-		void	setRawBits(int a);
-		float	toFloat(void) const;
-		float	toInt(void) const;
-		static Point	&max(Fixed & a, Fixed & b);
-		static Point	&min(Fixed & a, Fixed & b);
-
-		static const Point	&max(const Fixed & a, const Fixed & b);
-		static const Point	&min(const Fixed & a, const Fixed & b);*/
 };
 
 std::ostream & operator<<(std::ostream & o, Point const & rhs);
