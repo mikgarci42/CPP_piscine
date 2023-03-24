@@ -4,4 +4,5 @@
 int main (void)
 {
 	DiamondTrap mik("Mikel");	
+	mik.attack("");
 }
