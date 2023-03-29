@@ -22,13 +22,13 @@ class ClapTrap
 		void	beRepaired(unsigned int amount);
 
 		std::string	getName(void) const;
-		void		setName(std::string name);
+		void		setName(std::string const name);
 		int			getHitpoints(void) const;
-		void		setHitpoints(int val);
+		void		setHitpoints(int const val);
 		int			getEnergypoints(void) const;
-		void		setEnergypoints(int val);
+		void		setEnergypoints(int const val);
 		int			getAttackdamage(void) const;
-		void		setAttackdamage(int val);
+		void		setAttackdamage(int const val);
 };
 
 #endif

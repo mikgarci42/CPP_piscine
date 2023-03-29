@@ -3,7 +3,7 @@
 
 int main (void)
 {
-	
 	ScavTrap aitor("Aitor");
 	aitor.attack("mikel");
+	aitor.guardGate();
 }

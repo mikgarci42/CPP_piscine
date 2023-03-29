@@ -2,6 +2,7 @@
 
 ScavTrap::ScavTrap(void)
 {
+	this->_name = "Unknown";
 	std::cout << "Unknown ScavTrap was created" << std::endl;
 	this->_hitpoints = 100;
 	this->_energypoints = 50;

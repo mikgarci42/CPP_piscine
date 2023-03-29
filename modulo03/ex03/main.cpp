@@ -4,5 +4,6 @@
 int main (void)
 {
 	DiamondTrap mik("Mikel");	
+	mik.whoAmI();
 	mik.attack("");
 }

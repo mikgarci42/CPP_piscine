@@ -13,7 +13,7 @@ Animal::~Animal(void)
 
 Animal & Animal::operator=(const Animal &rhs) 
 {
-	std::cout << "Animal cpy  has been created\n";
+
 	this->type = rhs.getType();
 	return *this;
 }

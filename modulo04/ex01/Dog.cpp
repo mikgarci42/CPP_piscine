@@ -15,10 +15,8 @@ Dog::~Dog(void)
 
 Dog & Dog::operator=(const Dog &rhs) 
 {
-	std::cout << "Dog cpy  has been created\n";
+
 	this->type = rhs.getType();
-	if (this->brain)
-		delete (this->brain);
 	this->brain = new Brain();
 /*	for (int i = 0; i < 100; i++)
         	this->brain->setIdea(rhs.brain->getIdea(i), i);*/
@@ -27,7 +25,6 @@ Dog & Dog::operator=(const Dog &rhs)
 }
 
 Dog::Dog(const Dog &src) {
-	this->brain = NULL;
 	*this = src;
 }
 

@@ -2,13 +2,15 @@
 
 FragTrap::FragTrap(void)
 {
+	this->_name = "Unknown";
 	std::cout << "Unknown FragTrap was created" << std::endl;
 	this->_hitpoints = 100;
 	this->_energypoints = 100;
 	this->_attackdamage = 30;
 }
-FragTrap::FragTrap(std::string const name) : ClapTrap(name)
+FragTrap::FragTrap(std::string const name) : ClapTrap("MIKEEEL")
 {
+	this->_name = name;
 	this->_hitpoints = 100;
 	this->_energypoints = 100;
 	this->_attackdamage = 30;
