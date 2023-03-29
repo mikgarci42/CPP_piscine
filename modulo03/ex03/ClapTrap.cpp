@@ -90,22 +90,22 @@ int	ClapTrap::getAttackdamage(void) const
 	return (this->_attackdamage);
 }
 
-void	ClapTrap::setName(std::string name)
+void	ClapTrap::setName(std::string const name)
 {
 	this->_name = name;
 }
 
-void	ClapTrap::setHitpoints(int val)
+void	ClapTrap::setHitpoints(int const val)
 {
 	this->_hitpoints = val;
 }
 
-void	ClapTrap::setEnergypoints(int val)
+void	ClapTrap::setEnergypoints(int const val)
 {
 	this->_energypoints = val;
 }
 
-void	ClapTrap::setAttackdamage(int val)
+void	ClapTrap::setAttackdamage(int const val)
 {
 	this->_attackdamage = val;
 }
