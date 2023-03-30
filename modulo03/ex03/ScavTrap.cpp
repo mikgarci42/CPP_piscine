@@ -3,7 +3,9 @@
 ScavTrap::ScavTrap(void)
 {
 	std::cout << "Unknown ScavTrap was created" << std::endl;
+	this->_name = "Unknown";
 	this->_hitpoints = 100;
+	_energypresent = 50;
 	this->_energypoints = 50;
 	this->_attackdamage = 20;
 }
@@ -11,6 +13,7 @@ ScavTrap::ScavTrap(std::string const name) : ClapTrap(name)
 {
 	this->_name = name;
 	this->_hitpoints = 100;
+	_energypresent = 50;
 	this->_energypoints = 50;
 	this->_attackdamage = 20;
 	std::cout << "ScavTrap " << this->_name << " was created" << std::endl;

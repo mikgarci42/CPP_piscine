@@ -4,15 +4,15 @@
 ClapTrap::ClapTrap(void)
 {
 	std::cout << "Unknown ClapTrap was created" << std::endl;
+	this->_name = "Unknown";
 	this->_hitpoints = 10;
 	this->_energypoints = 10;
 	this->_attackdamage = 0;
 }
-ClapTrap::ClapTrap(std::string const name)
+ClapTrap::ClapTrap(std::string const name) : _energypoints(10)
 {
 	this->_name = name;
 	this->_hitpoints = 10;
-	this->_energypoints = 10;
 	this->_attackdamage = 0;
 	std::cout << "ClapTrap " << this->_name << " was created" << std::endl;
 }
