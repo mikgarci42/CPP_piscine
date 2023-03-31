@@ -4,13 +4,10 @@ DiamondTrap::DiamondTrap(void)
 {
 	std::cout << "Unknown DiamondTrap was created" << std::endl;
 }
-DiamondTrap::DiamondTrap(std::string const name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
+DiamondTrap::DiamondTrap(std::string const name) : ClapTrap(name + "_clap_name"), ScavTrap(name, true), FragTrap(name, true)
 {
 	ClapTrap::_name = (name + "_clap_name"); 
 	this->_name = name;
-	this->_energypoints = ScavTrap::_energypresent;
-	this->_attackdamage = FragTrap::_attackpresent;
-	this->_hitpoints = FragTrap::_hitpresent;
 	std::cout << "DiamondTrap " << this->_name << " was created" << std::endl;
 }
 

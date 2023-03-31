@@ -5,12 +5,10 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	protected:
-		int	_hitpresent;
-		int	_attackpresent;	
 	public:
 		FragTrap(void);
 		FragTrap(std::string name);
+		FragTrap(std::string name, bool ea);
 		~FragTrap(void);
 		FragTrap(FragTrap const & src);
 		FragTrap & operator=(FragTrap const & rhs);
