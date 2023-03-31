@@ -1,17 +1,17 @@
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef AANIMAL_H
+# define AANIMAL_H
 # include <iostream>
 
-class Animal
+class AAnimal
 {
 	protected:
 		std::string type;
 
 	public:
-		Animal(void);
-		Animal(Animal const &);
-		Animal& operator=(Animal const &);
-		virtual ~Animal(void);
+		AAnimal(void);
+		AAnimal(AAnimal const &);
+		AAnimal& operator=(AAnimal const &);
+		virtual ~AAnimal(void);
 
 		void		setType(std::string type);
 		std::string	getType(void) const;

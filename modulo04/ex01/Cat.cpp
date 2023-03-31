@@ -15,8 +15,9 @@ Cat::~Cat(void)
 
 Cat & Cat::operator=(const Cat &rhs) 
 {
-
 	this->type = rhs.getType();
+	if (this->brain)
+		delete (this->brain);
 	this->brain = new Brain();
 /*	for (int i = 0; i < 100; i++)
         	this->brain->setIdea(rhs.brain->getIdea(i), i);*/
@@ -24,7 +25,9 @@ Cat & Cat::operator=(const Cat &rhs)
 	return *this;
 }
 
-Cat::Cat(const Cat &src) {
+Cat::Cat(const Cat &src) 
+{
+	this->brain = NULL;
 	*this = src;
 }
 

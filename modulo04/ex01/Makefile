@@ -8,7 +8,7 @@ NAME = Animal
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 
+CXXFLAGS = -Wall -Werror -Wextra -g3 -std=c++98 -fsanitize=address
 
 SRC = $(addsuffix .cpp, $(FILE))
 OBJ = $(addsuffix .o, $(FILE))
@@ -26,7 +26,12 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	rm -rf *.swp
 
 re: fclean all
+	$(RM) *.a
+	$(RM) -r *.dSYM
+	$(RM) -r .*.swp
+	$(RM) -r *.swp
 
 .PHONY : clean fclean all re

@@ -22,7 +22,7 @@ Animal::Animal(const Animal &src) {
 	*this = src;
 }
 
-void	Animal::setType(std::string type)
+void	Animal::setType(std::string const type)
 {
 	this->type = type;
 	return ;
