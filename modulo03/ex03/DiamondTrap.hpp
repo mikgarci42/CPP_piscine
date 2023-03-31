@@ -15,7 +15,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		~DiamondTrap(void);
 		DiamondTrap(DiamondTrap const & src);
 		DiamondTrap & operator=(DiamondTrap const & rhs);
-		using ClapTrap::attack;
+		using ScavTrap::attack;
 
 		void	whoAmI(void);
 };
