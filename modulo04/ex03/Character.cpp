@@ -46,14 +46,19 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	(void) idx;
+	if (idx < 4)
+	{
+		this->wp[idx] = NULL;
+		std::cout << "Weapon unequiped\n";
+	}
 	return ;
 }
 
 void Character::use(int idx, ICharacter& target)
 {
-	this->wp[idx]->use(target);
+	if (idx < 4 && this->wp[idx])
+		this->wp[idx]->use(target);
+	else
+		std::cout << "* No weapon * " << std::endl;
 	return ;	
 }
-
-

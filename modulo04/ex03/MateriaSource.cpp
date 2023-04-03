@@ -41,6 +41,7 @@ void MateriaSource::learnMateria(AMateria *m)
 		}
 		idx++;
 	}
+	return;
 }
 
 AMateria*    MateriaSource::createMateria(std::string const &type) 
@@ -48,8 +49,8 @@ AMateria*    MateriaSource::createMateria(std::string const &type)
 	int idx = 0;
 	while (idx < 4)
 	{
-        	if (this->id[idx] && this->id[idx]->getType() == type)
-	       	{
+        if (this->id[idx] && this->id[idx]->getType() == type)
+		{
 			std::cout << *(this->id[idx]) << " materia has been CREATED" << std::endl;
 			return(this->id[idx]->clone());
 		}
