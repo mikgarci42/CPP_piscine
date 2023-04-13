@@ -11,19 +11,28 @@ MateriaSource::MateriaSource(MateriaSource const &obj)
 {
 	std::cout << "MateriaSource copy constructor called" << std::endl;
 	*this = obj;
-	for (int i = 0; i < 4; i++)
-		this->id[i] = NULL;
 }
 
 MateriaSource::~MateriaSource(void) 
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->id[i])
+			delete this->id[i];
+	}
 	std::cout << "MateriaSource default destructor called" << std::endl;
 }
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &obj) 
 {
 	std::cout << "MateriaSource asignment operator overload called" << std::endl;
-	*(this->id) = *(obj.id);
+	for (int i = 0; i < 4; i++)
+	{
+		if (obj.id[i])
+			this->id[i] = obj.id[i]->clone();
+		else
+			this->id[i] = NULL;
+	}
 	return *this;
 }
 

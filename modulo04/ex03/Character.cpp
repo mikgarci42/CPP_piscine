@@ -14,7 +14,12 @@ Character::Character(Character const & src)
 }
 
 Character::~Character(void)
-{
+{	
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->wp[i])
+			delete this->wp[i];
+	}
 	std::cout << this->name << " character deleted\n";
 }
 
@@ -27,6 +32,13 @@ Character & Character::operator=(Character const & rhs)
 {
 	if (this != &rhs)
 		this->name = rhs.getName();
+	for (int i = 0; i < 4; i++)
+	{
+		if (rhs.wp[i])
+			this->wp[i] = rhs.wp[i]->clone();
+		else
+			this->wp[i] = NULL;
+	}
 	return *this;
 }
 

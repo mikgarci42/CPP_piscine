@@ -10,7 +10,7 @@ class MateriaSource : public IMateriaSource
 	public:
 		
 		MateriaSource(void);
-    		MateriaSource(MateriaSource const &obj);
+    	MateriaSource(MateriaSource const &obj);
 
   		~MateriaSource(void);
 
