@@ -13,8 +13,5 @@ int	main(void)
 	mik.setGradeUp();
 	std::cout << mik.getGrade() << std::endl;
 	Bureaucrat lol(mik);
-	std::cout << lol.getName() << std::endl;
-	std::cout << mik.getName() << std::endl;
-	std::cout << mik;
-	lol.getName();
+	std::cout << lol.getGrade() << std::endl;
 }
