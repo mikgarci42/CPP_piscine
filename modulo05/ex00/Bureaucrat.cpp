@@ -3,31 +3,19 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
-	try
-	{
-		if (grade > 150)
-			throw GradeTooLowException();
-		else if (grade < 1)
-			throw GradeTooHighException();
-		else
-			this->_grade = grade;
-	}
-	catch (GradeTooLowException& e)
-	{
-		this->_grade = 150;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
-	catch (GradeTooHighException& e)
-	{
-		this->_grade = 1;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
+	this->setGrade(grade);
+/*	if (grade > 150)
+		throw GradeTooLowException();
+	else if (grade < 1)
+		throw GradeTooHighException();
+	else
+		this->_grade = grade;*/
 	std::cout << "Constructor called\n";
 }
 
 Bureaucrat::~Bureaucrat(void)
 {
-	std::cout << "Destructor called\n";
+	std::cout << "Destructor " << this->_name << " called\n";
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat & src) : _name(src.getName())
@@ -62,57 +50,22 @@ int		Bureaucrat::getGrade(void) const
 
 void	Bureaucrat::setGrade(int const & grade)
 {
-	try
-	{
-		if (grade > 150)
-			throw GradeTooLowException();
-		else if (grade < 1)
-			throw GradeTooHighException();
-		else
-			this->_grade = grade;
-	}
-	catch (GradeTooLowException& e)
-	{
-		this->_grade = 150;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
-	catch (GradeTooHighException& e)
-	{
-		this->_grade = 1;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
+	if (grade > 150)
+		throw GradeTooLowException();
+	else if (grade < 1)
+		throw GradeTooHighException();
+	else
+		this->_grade = grade;
 }
 
 void	Bureaucrat::setGradeUp(void)
 {
-	this->_grade -= 1;
-	try
-	{
-		if (this->_grade < 1)
-			throw GradeTooHighException();
-		else
-			std::cout << "Upgraded\n";
-	}
-	catch (GradeTooHighException& e)
-	{
-		this->_grade = 1;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
+	this->setGrade(this->_grade - 1);
+	std::cout << "Upgraded\n";
 }
 
 void		Bureaucrat::setGradeDown(void)
 {
-	this->_grade += 1;
-	try
-	{
-		if (this->_grade > 150)
-			throw GradeTooLowException();
-		else
-			std::cout << "Downgraded\n";
-	}
-	catch (GradeTooLowException& e)
-	{
-		this->_grade = 150;
-		std::cout << "Se ha producido una expecion: " << e.what() << std::endl;
-	}
+	this->setGrade(this->_grade + 1);
+	std::cout << "Downgraded\n";
 }
