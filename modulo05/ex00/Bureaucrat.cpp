@@ -4,12 +4,6 @@
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
 	this->setGrade(grade);
-/*	if (grade > 150)
-		throw GradeTooLowException();
-	else if (grade < 1)
-		throw GradeTooHighException();
-	else
-		this->_grade = grade;*/
 	std::cout << "Constructor called\n";
 }
 
@@ -34,7 +28,7 @@ Bureaucrat & Bureaucrat::operator = (Bureaucrat const & src)
 
 std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs)
 {
-	o << "The Bureaucrat " << rhs.getName() << " has " << rhs.getGrade() << " grade." << std::endl;
+	o << rhs.getName() << ", buraucrat grade " << rhs.getGrade() << "." << std::endl;
 	return o;
 }
 
