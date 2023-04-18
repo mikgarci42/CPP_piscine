@@ -1,5 +1,6 @@
 FILE =	main		\
 		Bureaucrat	\
+		Form		\
 
 NAME = Bureaucrat
 
