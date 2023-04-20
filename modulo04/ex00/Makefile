@@ -1,6 +1,8 @@
 FILE =	main		\
 	Animal		\
+	WrongAnimal		\
 	Cat		\
+	WrongCat		\
 	Dog		\
 
 NAME = Animal

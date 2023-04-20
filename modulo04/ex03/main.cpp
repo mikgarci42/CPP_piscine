@@ -7,23 +7,23 @@
 
 int main(void)
 {
-/*	IMateriaSource *src = new MateriaSource();
-	src->learnMateria(new Ice());
-//	src->createMateria("ice");
+	IMateriaSource *src = new MateriaSource();
+	AMateria *lel = new Ice();
+	src->learnMateria(lel);
+	AMateria *tet = src->createMateria("ice");
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
-	me->equip(tmp);*/
-//	Character bob = new Character("bob");
+	me->equip(tmp);
+	Character *bob1 = new Character("bob");
+	me->use(4, *bob1);
+	me->use(0, *bob1);
 	MateriaSource bob;
-//	me->use(4, *bob);
-//	me->use(0, *bob);
-//	me->unequip(0);
-//	me->use(0, *bob);
 	MateriaSource old(bob);
 	(void) old;
-//	delete src;
-//	delete me;
-//	delete bob;
+	delete me;
+	delete bob1;
+	delete src;
+	delete tet;
 	return 1;
 }

@@ -3,6 +3,8 @@
 Brain::Brain(void)
 {
 	std::cout << "Brain has been created\n";
+	for (int i = 0; i < 100; i++)
+        	this->ideas[i] = "IDEA";
 }
 
 Brain::~Brain(void)
@@ -23,7 +25,7 @@ Brain::Brain(const Brain &src) {
 
 void Brain::setIdea(std::string idea, int num)
 {
-	if (num < 100)
+	if (num < 100 && num >= 0)
 		this->ideas[num] = idea;
 	return ;
 }
