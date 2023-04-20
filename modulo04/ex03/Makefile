@@ -5,6 +5,7 @@ FILE =	main		\
 	MateriaSource	\
 	Ice		\
 	Character	\
+	Cure		\
 
 NAME = Materia
 

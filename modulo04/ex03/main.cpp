@@ -4,16 +4,17 @@
 #include "ICharacter.hpp"
 #include "Character.hpp"
 #include "Ice.hpp"
+#include "Cure.hpp"
 
 int main(void)
 {
 	IMateriaSource *src = new MateriaSource();
-	AMateria *lel = new Ice();
+	AMateria *lel = new Cure();
 	src->learnMateria(lel);
-	AMateria *tet = src->createMateria("ice");
+	AMateria *tet = src->createMateria("cure");
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
-	tmp = src->createMateria("ice");
+	tmp = src->createMateria("cure");
 	me->equip(tmp);
 	Character *bob1 = new Character("bob");
 	me->use(4, *bob1);
