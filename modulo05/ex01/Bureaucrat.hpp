@@ -1,6 +1,8 @@
 #ifndef BUREAUCRAT_H
 #define BUREAUCRAT_H
 #include <iostream>
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -31,6 +33,7 @@ class Bureaucrat
 				}
 		};
 
+		void		signForm(Form & src) const;
 		std::string	getName(void) const;
 		int			getGrade(void) const;
 		void		setName(std::string const & name);
