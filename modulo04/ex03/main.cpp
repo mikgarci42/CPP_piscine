@@ -9,12 +9,12 @@
 int main(void)
 {
 	IMateriaSource *src = new MateriaSource();
-	AMateria *lel = new Cure();
+	AMateria *lel = new Ice();
 	src->learnMateria(lel);
-	AMateria *tet = src->createMateria("cure");
+	AMateria *tet = src->createMateria("ice");
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
-	tmp = src->createMateria("cure");
+	tmp = src->createMateria("ice");
 	me->equip(tmp);
 	Character *bob1 = new Character("bob");
 	me->use(4, *bob1);
