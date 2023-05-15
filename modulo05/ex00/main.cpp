@@ -10,8 +10,8 @@ int	main(void)
 		mik.setGrade(2);
 		std::cout << mik.getGrade() << std::endl;
 		mik.setGradeUp();
-		std::cout << mik.getGrade() << " AAA" << std::endl;
-		mik.setGrade(23);
+		std::cout << mik.getGrade() << " grade up" << std::endl;
+		mik.setGrade(4);
 		std::cout << mik.getGrade() << std::endl;
 		mik.setGradeUp();
 		std::cout << mik.getGrade() << std::endl;

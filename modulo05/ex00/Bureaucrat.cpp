@@ -12,6 +12,7 @@ Bureaucrat::~Bureaucrat(void)
 	std::cout << "Destructor " << this->_name << " called\n";
 }
 
+//Al ser un atributo constante, tiene que estar inicializado en el parametro de construccion. No se puede hacer de otra forma.
 Bureaucrat::Bureaucrat(const Bureaucrat & src) : _name(src.getName())
 {
 	*this = src;

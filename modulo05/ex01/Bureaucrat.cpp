@@ -12,6 +12,7 @@ Bureaucrat::~Bureaucrat(void)
 	std::cout << "Bureaucrat destructor called\n";
 }
 
+//Al ser un atributo constante, tiene que estar inicializado en el parametro de construccion. No se puede hacer de otra forma.
 Bureaucrat::Bureaucrat(const Bureaucrat & src) : _name(src.getName())
 {
 	*this = src;
@@ -30,6 +31,12 @@ std::ostream & operator<<(std::ostream & o, Bureaucrat const & rhs)
 {
 	o << rhs.getName() << ", buraucrat grade " << rhs.getGrade() << "." << std::endl;
 	return o;
+}
+
+void	Bureaucrat::signForm(Form & src)
+{
+	Bureaucrat s(this);
+	src.beSigned(&this);
 }
 
 std::string		Bureaucrat::getName(void) const

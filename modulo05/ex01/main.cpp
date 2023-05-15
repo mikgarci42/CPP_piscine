@@ -8,7 +8,7 @@ int	main(void)
 		Bureaucrat mik("gol", 1);
 		Form form("feo", 1, 15);
 		std::cout << form.getGradeExecute() << std::endl;
-		form.beSigned(mik);
+	//	form.beSigned(mik);
 	}
 	catch (std::exception &e)
 	{
