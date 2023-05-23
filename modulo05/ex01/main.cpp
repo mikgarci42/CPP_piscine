@@ -6,13 +6,15 @@ int	main(void)
 	try
 	{
 		Bureaucrat mik("gol", 15);
-		Form form("feo", 20, 15);
-		std::cout << form.getGradeExecute() << std::endl;
+		Form form("feo", 20, 15, true);
+		std::cout << form;
+		std::cout << form.getSigned();
+	//	std::cout << form.getGradeExecute() << std::endl;
 	//	form.beSigned(mik);
-		mik.signForm(form);
-		Form fiu(form);
-		mik.signForm(fiu);
-		std::cout << fiu;
+	//	mik.signForm(form);
+	//	Form fiu(form);
+	//	mik.signForm(fiu);
+	//	std::cout << fiu;
 	}
 	catch (std::exception &e)
 	{

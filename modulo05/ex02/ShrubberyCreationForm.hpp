@@ -5,11 +5,15 @@
 
 class ShrubberyCreationForm : public AForm
 {
+	private:
+		ShrubberyCreationForm(void);
 	public:
 		ShrubberyCreationForm(std::string name);
+		ShrubberyCreationForm (const ShrubberyCreationForm & src);
+		ShrubberyCreationForm & operator=(ShrubberyCreationForm const & src);
 		~ShrubberyCreationForm(void);
 
-		void	execute(Bureaucrat const & executor) const;
+		bool	execute(Bureaucrat const & executor) const;
 };
 
 #endif

@@ -43,6 +43,14 @@ void	Bureaucrat::signForm(AForm & src)
 		std::cout << this->_name << " couldn't sign " << src.getName() << " because it's already signed." << std::endl;
 }
 
+void		Bureaucrat::executeForm(AForm const & form)
+{
+	if (form.execute(*this))
+		std::cout << this->getName() << " execute " << form.getName() << std::endl;
+	else
+		std::cout << this->getName() << " couldn't execute " << form.getName() << std::endl;
+}
+
 std::string		Bureaucrat::getName(void) const
 {
 	return(this->_name);

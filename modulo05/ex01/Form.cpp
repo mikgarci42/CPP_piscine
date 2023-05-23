@@ -1,7 +1,9 @@
 #include "Form.hpp"
 
-Form::Form(std::string name, int gradeSign, int gradeExecute) : _name(name), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
+Form::Form(std::string name, int gradeSign, int gradeExecute, bool _signed) : _name(name), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
 {
+	if (_signed)
+		this->_signed = true;
 	setValue(gradeSign);
 	setValue(gradeExecute);
 	std::cout << "Form constructor called\n";

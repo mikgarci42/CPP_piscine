@@ -5,9 +5,11 @@ int	main(void)
 {
 	try
 	{
-		Bureaucrat mik("gol", 15);
-		ShrubberyCreationForm lol("mik");
-		std::cout << lol.getGradeSign();
+		Bureaucrat mik("gol", 136);
+		ShrubberyCreationForm * lol = new ShrubberyCreationForm("mik");
+		std::cout << lol->getSigned() << std::endl;
+		mik.signForm(*lol);
+		mik.executeForm(*lol);
 	}
 	catch (std::exception &e)
 	{

@@ -1,7 +1,9 @@
 #include "AForm.hpp"
 
-AForm::AForm(std::string name, int gradeSign, int gradeExecute) : _name(name), _signed(false), _gradeSign(gradeSign), _gradeExecute(gradeExecute)
+AForm::AForm(std::string name, int gradeSign, int gradeExecute, bool sign) : _name(name), _gradeSign(gradeSign), _gradeExecute(gradeExecute) 
 {
+	if (sign)
+		this->_signed = true;
 	setValue(gradeSign);
 	setValue(gradeExecute);
 	std::cout << "Form constructor called\n";
@@ -28,6 +30,13 @@ bool	AForm::beSigned(Bureaucrat & src)
 	}
 	else
 		throw (GradeTooLowException());
+	return (false);
+}
+
+bool	AForm::checkExecute(Bureaucrat const & executor) const
+{
+	if (this->getSigned() && (executor.getGrade() <= this->getGradeExecute()))
+		return (true);
 	return (false);
 }
 
