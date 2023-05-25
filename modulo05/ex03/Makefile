@@ -4,6 +4,7 @@ FILE =	main					\
 		ShrubberyCreationForm	\
 		RobotomyRequestForm		\
 		PresidentialPardonForm	\
+		Intern					\
 
 NAME = Bureaucrat
 

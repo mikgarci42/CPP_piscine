@@ -3,6 +3,8 @@
 
 #include "AForm.hpp"
 
+class AForm;
+
 class ShrubberyCreationForm : public AForm
 {
 	private:
@@ -14,6 +16,7 @@ class ShrubberyCreationForm : public AForm
 		~ShrubberyCreationForm(void);
 
 		bool	execute(Bureaucrat const & executor) const;
+		static AForm*	copy(std::string target);	
 };
 
 #endif
